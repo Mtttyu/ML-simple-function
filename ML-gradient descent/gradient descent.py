@@ -9,7 +9,6 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import mean_absolute_error
 
 def MSE(x,y,weight):
     inner = np.power(((X * weight.T) - y), 2)
@@ -18,8 +17,6 @@ def MSE(x,y,weight):
 def MAE(y_true, predictions):
     y_true, predictions = np.array(y_true), np.array(predictions)
     return np.mean(np.abs(y_true - predictions))
-
-
 
 
 def gradientDescent(X, y, weight, alpha, iters):
@@ -55,8 +52,6 @@ for i in range(1000):
     
     Y = 5 * X1 + 3 * X2 + 1.5 * X3 + 6
     label.append(Y)
-    
-    
     
     
     
@@ -100,31 +95,6 @@ print('**************************************')
 print('mean squared error = ' , cost1)
 print('**************************************')
 print('mean abs error = ' , cost2)
-
-
-
-
-# thismodel=LinearRegression()
-# sel=SelectFromModel(estimator=thismodel,max_features=None)
-# X=sel.fit(X,y).transform(X)
-
-# X=StandardScaler().fit_transform(X)
-
-
-
-
-# model=LinearRegression()
-# model.fit(X_train, y_train)
-
-# y_pred=model.predict(X_test)
-
-
-
-
-
-
-
-
 
 
 
